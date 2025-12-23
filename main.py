@@ -1,15 +1,17 @@
-# 1 Import Libraries
-import tensorflow as tf
-from tensorflow.keras.datasets import cifar10
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Flatten, Dropout
-from tensorflow.keras.layers import Conv2D, MaxPooling2D
-from tensorflow.keras.optimizers import SGD
-from tensorflow.keras.utils import to_categorical
+# 1. Import Libraries 
+import keras
+import tensorflow.keras
+from keras.datasets import mnist
+from keras.models import Sequential
+from keras.layers import Dense, Flatten, Dropout
+from keras.layers import Conv2D, MaxPooling2D
 import matplotlib.pyplot as plt
+from keras.constraints import maxnorm
+from keras.utils import np_utils
+from tensorflow.keras.optimizers import SGD
 
 # 2 Load Dataset
-(x_train, y_train), (x_test, y_test) = cifar10.load_data()
+(x_train, y_train), (x_test, y_test) = cirfar10.load_data()
 
 # Plot first 9 images
 for i in range(9):
